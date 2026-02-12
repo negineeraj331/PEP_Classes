@@ -1,0 +1,50 @@
+Space complexity is the amount of memory (RAM) an algorithm uses to execute, relative to the size of the input. It is expressed using Big O notation.
+
+It includes two components:
+
+Fixed Part: Memory for constants, simple variables, and code instruction space (independent of input size).
+Variable Part: Memory for dynamic allocations (like arrays or objects) and the call stack (for recursion) that grows as the input () grows.
+Why It Matters
+While time is often the primary concern, space is a "hard limit." If an algorithm takes too long, the user waits. If an algorithm runs out of memory, the program crashes (e.g., StackOverflowError or OutOfMemoryError).
+
+
+Common Space Complexities
+**1. Constant Space: **
+The algorithm uses the same amount of memory regardless of the input size. It does not allocate new structures proportional to the input.
+
+Example: Sorting an array "in-place" (like Bubble Sort) or swapping two variables.
+Why: You might need one or two temporary variables (temp), but you don't need a whole new array.
+**2. Linear Space: **
+The memory usage grows directly with the input size.
+
+Example 1 (Data Structures): Copying a list into a new list. If the original list has 100 items, the new one needs space for 100 items.
+Example 2 (Recursion): A recursive function that calls itself times linearly. The "call stack" must hold frames in memory.
+**3. Logarithmic Space: **
+This is common in divide-and-conquer algorithms where the recursion depth is logarithmic.
+
+Example: Quick Sort (in the standard implementation). While it sorts in place, it uses stack space for the recursion, and the height of that stack is usually .
+**4. Quadratic Space: **
+The memory usage grows by the square of the input.
+
+Example: Creating a 2D matrix (a grid) of size to store data, often seen in Dynamic Programming solutions.
+
+
+Key Concepts
+Auxiliary Space vs. Space Complexity
+Technically, there is a subtle difference:
+
+Space Complexity: Total space used (Input size + Extra space).
+Auxiliary Space: The extra space or temporary space used by the algorithm (excluding the input data).
+Practical Note: In coding interviews, when someone asks for "Space Complexity," they are usually asking for the Auxiliary Space. They want to know "how much extra RAM will this cost me?"
+The Time-Space Trade-off
+Often, you can make an algorithm faster (better Time Complexity) by using more memory (worse Space Complexity).
+
+Example: A Hash Map uses space to store data but allows for lookups. You are "spending" memory to "buy" speed.
+
+
+Summary Table
+Complexity	Memory Usage	            Example Context
+            Minimal / Fixed	            Iterative loops, swapping variables
+            Low growth	                Recursive sorting (Quick Sort)
+            Proportional	            Storing a copy of data, Linear Recursion
+            Heavy	                    2D Grids / Matrices

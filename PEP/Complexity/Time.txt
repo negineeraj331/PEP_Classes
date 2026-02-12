@@ -1,0 +1,50 @@
+Time complexity describes the amount of computer time it takes to run an algorithm. It doesn't measure the actual time, but rather how the number of operations grows as the input size increases.
+
+It is most commonly expressed using Big O notation.
+
+
+Common Time Complexities
+Here is a breakdown of the most common complexities, ranked from best (fastest) to worst (slowest).
+
+**1. Constant Time: **
+The runtime never changes, regardless of the input size.
+
+Example: Accessing a specific index in an array or looking up a key in a hash map.
+Analogy: Looking up a page number in a book's index (if you know the page, you go straight there).
+
+**2. Logarithmic Time: **
+The runtime grows very slowly. Each step cuts the problem size in half.
+
+Example: Binary search.
+Analogy: Finding a word in a dictionary by splitting the book in half repeatedly.
+
+**3. Linear Time: **
+The runtime grows directly in proportion to the input size. If the input doubles, the time doubles.
+
+Example: Looping through a list to find an item (linear search).
+Analogy: Reading a book page by page.
+
+**4. Linearithmic Time: **
+Slightly slower than linear, but much faster than quadratic. This is the standard efficiency for good sorting algorithms.
+
+Example: Merge Sort, Quick Sort, Heap Sort.
+
+**5. Quadratic Time: **
+The runtime is proportional to the square of the input size. This usually happens with nested loops (a loop inside a loop).
+
+Example: Bubble Sort, checking for duplicates in a list by comparing every item to every other item.
+
+**6. Exponential Time: **
+The runtime doubles with each addition to the input data set. This becomes very slow very quickly.
+
+Example: Recursive calculation of Fibonacci numbers without memoization.
+
+
+Complexity Comparison Table
+Complexity	        Name	                Performance with Large Inputs	    Typical Algorithm
+                    Constant	            Excellent	                        Hash Map Lookup
+                    Logarithmic	            Very Good	                        Binary Search
+                    Linear	                Fair	                            Iterating an Array
+                    Linearithmic	        Decent	                            Merge Sort
+                    Quadratic	            Poor	                            Nested Loops
+                    Exponential	            Terrible	                        Recursion (naive)
